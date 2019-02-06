@@ -7,6 +7,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.Talon;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -23,4 +26,20 @@ public class RobotMap {
   // number and the module. For example you with a rangefinder:
   // public static int rangefinderPort = 1;
   // public static int rangefinderModule = 1;
+  public static SpeedController LFmotor;
+  public static SpeedController LBmotor;
+  public static SpeedController RFmotor;
+  public static SpeedController RBmotor;
+
+  public static void init(){
+    //PWM
+    LFmotor = new Talon(0);
+    LBmotor = new Talon(1);
+    RFmotor = new Talon(2);
+    RBmotor = new Talon(3);
+
+    //DIO
+
+    //Analog
+  }
 }
